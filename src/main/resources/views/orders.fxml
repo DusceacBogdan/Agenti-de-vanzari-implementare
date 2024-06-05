@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="597.0" prefWidth="472.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="window.OrderWindow">
+   <children>
+      <ImageView fitHeight="618.0" fitWidth="526.0" layoutX="-2.0" layoutY="-2.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../style/1.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="43.0" layoutY="46.0" text="My Orders">
+         <font>
+            <Font name="Bell MT Bold" size="32.0" />
+         </font>
+      </Label>
+      <TableView fx:id="tableOrders" layoutX="46.0" layoutY="151.0" opacity="0.86" prefHeight="290.0" prefWidth="379.0" style="-fx-background-radius: 12; -fx-border-radius: 12;">
+        <columns>
+          <TableColumn fx:id="idColumn" prefWidth="75.0" text="No. Order" />
+          <TableColumn fx:id="dateColumn" prefWidth="75.0" text="Date" />
+          <TableColumn fx:id="priceColumn" prefWidth="75.0" text="Price" />
+          <TableColumn fx:id="statusColumn" prefWidth="75.0" text="Status" />
+          <TableColumn fx:id="importanceColumn" prefWidth="75.0" text="Importance" />
+        </columns>
+      </TableView>
+      <Button layoutX="106.0" layoutY="488.0" mnemonicParsing="false" onAction="#clickCancelOrder" prefHeight="39.0" prefWidth="95.0" style="-fx-background-radius: 12;" text="Cancel Order" />
+      <Button layoutX="255.0" layoutY="488.0" mnemonicParsing="false" onAction="#clickMakeUrgentButton" prefHeight="39.0" prefWidth="95.0" style="-fx-background-radius: 12;" text="Make Urgent" />
+   </children>
+</AnchorPane>
